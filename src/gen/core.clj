@@ -154,7 +154,7 @@
 
 (defn -main
   []
-  (let [img (->> "../ralsei.bmp" File. ImageIO/read)
+  (let [img (->> "./ralsei.bmp" File. ImageIO/read)
         tiles (into [] (image->seq img))
 
         _ (assert (every? is-valid-tile tiles))
